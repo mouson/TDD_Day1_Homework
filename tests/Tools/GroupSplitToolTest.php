@@ -1,8 +1,8 @@
 <?php
+use Homework\Tools\GroupSplitTool;
 
 class GroupSplitToolTest extends PHPUnit_Framework_TestCase
 {
-
     /**
      * 分頁取值工具
      * 測試以三筆為一分頁，驗證分組結果是否為四組

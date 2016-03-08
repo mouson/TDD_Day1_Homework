@@ -9,6 +9,11 @@
         "phpspec/prophecy": "~1.0",
         "mdarse/phpunit-notifier": "^1.0"
     },
+    "autoload": {
+        "psr-4": {
+          "Homework\\": "src/"
+        }
+    },
     "config": {
         "preferred-install": "dist"
     }
