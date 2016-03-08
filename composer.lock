@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8a258a72c24ae2b9922761520ce7408a",
-    "content-hash": "71435beb4194dd4b1baee192a6852a6d",
+    "hash": "7f4ff9c7b53912565e61696ceca6f21f",
+    "content-hash": "db8550b4dfbce1750a53aa5acb4781d1",
     "packages": [],
     "packages-dev": [
         {
@@ -277,6 +277,95 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "jolicode/jolinotif",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jolicode/JoliNotif.git",
+                "reference": "1fbb6d922b4518358c737033225c49dc05e83d93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jolicode/JoliNotif/zipball/1fbb6d922b4518358c737033225c49dc05e83d93",
+                "reference": "1fbb6d922b4518358c737033225c49dc05e83d93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/process": "~2.3"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "~1.5",
+                "phpunit/phpunit": "~4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Joli\\JoliNotif\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïck Piera",
+                    "email": "pyrech@gmail.com"
+                }
+            ],
+            "description": "Send desktop notifications on Windows, Linux, MacOS.",
+            "keywords": [
+                "MAC",
+                "growl",
+                "linux",
+                "notification",
+                "windows"
+            ],
+            "time": "2015-06-19 22:20:46"
+        },
+        {
+            "name": "mdarse/phpunit-notifier",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mdarse/phpunit-notifier.git",
+                "reference": "e40e4a5ac0026e07b44ff08960a2f2de24a86f99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mdarse/phpunit-notifier/zipball/e40e4a5ac0026e07b44ff08960a2f2de24a86f99",
+                "reference": "e40e4a5ac0026e07b44ff08960a2f2de24a86f99",
+                "shasum": ""
+            },
+            "require": {
+                "jolicode/jolinotif": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPUnitNotifier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathieu Darse",
+                    "email": "hello@mathieudarse.fr"
+                }
+            ],
+            "description": "Desktop notifications for PHPUnit",
+            "time": "2015-04-03 10:33:47"
         },
         {
             "name": "mockery/mockery",
@@ -1325,6 +1414,55 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-06-21 13:59:46"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v2.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "7dedd5b60550f33dca16dd7e94ef8aca8b67bbfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/7dedd5b60550f33dca16dd7e94ef8aca8b67bbfe",
+                "reference": "7dedd5b60550f33dca16dd7e94ef8aca8b67bbfe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-02-02 13:33:15"
         },
         {
             "name": "symfony/yaml",
