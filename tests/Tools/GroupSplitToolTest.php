@@ -27,8 +27,6 @@ class GroupSplitToolTest extends PHPUnit_Framework_TestCase
 
         $row_per_group = 3;
 
-        $target = new GroupSplitTool($sample_data, $row_per_group);
-
         $expected_group_count = 4;
         $expected = [
             [
@@ -50,7 +48,7 @@ class GroupSplitToolTest extends PHPUnit_Framework_TestCase
         ];
 
         /** Act */
-        $actual = $target->getGroupList();
+        $actual = GroupSplitTool::getGroupList($sample_data, $row_per_group);
 
         /** Assert */
         $this->assertCount($expected_group_count, $actual);
@@ -82,12 +80,14 @@ class GroupSplitToolTest extends PHPUnit_Framework_TestCase
         $row_per_group = 3;
         $field_name = 'Cost';
 
-        $target = new GroupSplitTool($sample_data, $row_per_group);
-
         $expected = [6, 15, 24, 21];
 
         /** Act */
-        $actual = $target->getFieldSum($field_name);
+        $actual = GroupSplitTool::getFieldSum(
+            $sample_data,
+            $row_per_group,
+            $field_name
+        );
 
         /** Assert */
         $this->assertArraySubset($expected, $actual);
@@ -117,12 +117,14 @@ class GroupSplitToolTest extends PHPUnit_Framework_TestCase
         $row_per_group = 4;
         $field_name = 'Revenue';
 
-        $target = new GroupSplitTool($sample_data, $row_per_group);
-
         $expected = [50, 66, 60];
 
-        /** Act */
-        $actual = $target->getFieldSum($field_name);
+                /** Act */
+        $actual = GroupSplitTool::getFieldSum(
+            $sample_data,
+            $row_per_group,
+            $field_name
+        );
 
         /** Assert */
         $this->assertArraySubset($expected, $actual);
